@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.LoginPage">  
+<ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+              <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="EStyle" TargetType="Entry">
+        <Setter Property="FontSize">
+          <Setter.Value>
+              <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="LStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+              <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <AbsoluteLayout 
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+    <Grid RowSpacing="5">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="30" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="30" />
+      </Grid.ColumnDefinitions>
+
+      <Image x:Name="Logo" Grid.Row="1" Grid.Column="1" Source="bijtje.png"></Image>
+      <Label x:Name="WelcomeLabel" Grid.Row="2" Grid.Column="1" Style="{StaticResource LStyle}"></Label>
+      <Entry x:Name="Username" Grid.Row="3" Grid.Column="1" Style="{StaticResource EStyle}" Keyboard="Email" Text="{Binding UserName}"></Entry>
+      <Entry x:Name="Password" Grid.Row="4" Grid.Column="1" Style="{StaticResource EStyle}" IsPassword="True" Text="{Binding Password}"></Entry>
+      <Button x:Name="LoginButton" Grid.Row="5" Grid.Column="1" Style="{StaticResource BStyle}" Command="{Binding CheckLoginCommand}"></Button>
+      <Button x:Name="ForgotButton" Grid.Row="6" Grid.Column="1" Style="{StaticResource BStyle}" Command="{Binding GoToForgotPasswordCommand}"></Button>
+      <Button x:Name="RegisterButton" Grid.Row="7" Grid.Column="1" Style="{StaticResource BStyle}" Command="{Binding GoToRegisterCommand}"></Button>
+    </Grid>
+
+    <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="Black" IsEnabled="true"
+              HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="PositionProportional"
+       AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>
+  </AbsoluteLayout>
+</ContentPage>

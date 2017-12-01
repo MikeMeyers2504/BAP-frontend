@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TitleCheckinCheckoutPage" xml:space="preserve">
+    <value>Check in/out</value>
+    <comment>Title (Checkin/checkout) of this page</comment>
+  </data>
+  <data name="ChInButton" xml:space="preserve">
+    <value>Check in</value>
+    <comment>Button to checkin</comment>
+  </data>
+  <data name="ChOuButton" xml:space="preserve">
+    <value>Check out</value>
+    <comment>Button to checkout</comment>
+  </data>
+  <data name="Dutch" xml:space="preserve">
+    <value>Dutch</value>
+    <comment>Button for changing the language to Dutch</comment>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+    <comment>Button for changing the language to English</comment>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>French</value>
+    <comment>Button for changing the language to French</comment>
+  </data>
+  <data name="McButton" xml:space="preserve">
+    <value>Check in/out</value>
+    <comment>Menu button for going to the C page</comment>
+  </data>
+  <data name="MeButton" xml:space="preserve">
+    <value>Events</value>
+    <comment>Menu button for going to the E page</comment>
+  </data>
+  <data name="TitleMenuPage" xml:space="preserve">
+    <value>Menu</value>
+    <comment>Title (Menu) of this page</comment>
+  </data>
+  <data name="MrButton" xml:space="preserve">
+    <value>Rooms</value>
+    <comment>Menu button for going to the R page</comment>
+  </data>
+  <data name="MsButton" xml:space="preserve">
+    <value>Sandwiches</value>
+    <comment>Menu button for going to the S page</comment>
+  </data>
+  <data name="AlertOk" xml:space="preserve">
+    <value>OK</value>
+    <comment>Button 'OK' of display alert</comment>
+  </data>
+  <data name="AlertSentenceAllSandwichesPageSuccess" xml:space="preserve">
+    <value>You have successfully deleted all the orders!</value>
+    <comment>This is a sentence for the alert in the all sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceAllSandwichesPageWrong" xml:space="preserve">
+    <value>Something has gone wrong with retrieving or deleting all the ordered sandwiches! Please try again.</value>
+    <comment>This is a sentence for the alert in the all sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceCheckinCheckoutPage" xml:space="preserve">
+    <value>Something has gone wrong with the checkin/checkout! Please try again.</value>
+    <comment>This is a sentence for the alert in the checkin/checkout page</comment>
+  </data>
+  <data name="AlertSentenceLoginPageFill" xml:space="preserve">
+    <value>Failed to login, please make sure you fill in the username and password!</value>
+    <comment>This is a sentence for the alert in the login page</comment>
+  </data>
+  <data name="AlertSentenceLoginPageRight" xml:space="preserve">
+    <value>Failed to login, please make sure you enter the right username and password.</value>
+    <comment>This is a sentence for the alert in the login page</comment>
+  </data>
+  <data name="AlertSentenceLoginPageWrong" xml:space="preserve">
+    <value>Something has gone wrong with the login! Please try again.</value>
+    <comment>This is a sentence for the alert in the login page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageNotYet" xml:space="preserve">
+    <value>Not all the fields are filled in yet!</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPagePartOneSuccessfully" xml:space="preserve">
+    <value>You have succesfully ordered your sandwiche for </value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPagePartTwoSuccessfully" xml:space="preserve">
+    <value>, enjoy your meal!</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageResponsible" xml:space="preserve">
+    <value>You are the responsible for today. After pressing OK, you can see all the orders.</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageResponsibleNot" xml:space="preserve">
+    <value>You are not the responsible for this day, enjoy your meal.</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageWrong" xml:space="preserve">
+    <value>Something has gone wrong with your order! Please try again.</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentencePasswordPageChanged" xml:space="preserve">
+    <value>Your password has been changed!</value>
+    <comment>This is a sentence for the alert in the password page</comment>
+  </data>
+  <data name="AlertSentencePasswordPageEmpty" xml:space="preserve">
+    <value>Some or all fields are empty, please fill them in to change the password.</value>
+    <comment>This is a sentence for the alert in the password page</comment>
+  </data>
+  <data name="AlertSentencePasswordPageWrong" xml:space="preserve">
+    <value>Something has gone wrong with changing your password! Please try again.</value>
+    <comment>This is a sentence for the alert in the password page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageCreated" xml:space="preserve">
+    <value>You have created your account.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageEmpty" xml:space="preserve">
+    <value>Some or all fields are empty, please fill them in to register.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageNotMatch" xml:space="preserve">
+    <value>The new password and confirm password doesn't match, please fill them in again.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageTaken" xml:space="preserve">
+    <value>The account with that email has already been taken, please use an other email.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageWrong" xml:space="preserve">
+    <value>Something has gone wrong with registering your account! Please try again.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertTitleAccount" xml:space="preserve">
+    <value>Account</value>
+    <comment>Title 'Account' of display alert</comment>
+  </data>
+  <data name="AlertTitleAccountDuplicate" xml:space="preserve">
+    <value>Account duplicate!</value>
+    <comment>Title 'Account duplicate' of display alert</comment>
+  </data>
+  <data name="AlertTitleEmpty" xml:space="preserve">
+    <value>Empty!</value>
+    <comment>Title 'Empty' of display alert</comment>
+  </data>
+  <data name="AlertTitleError" xml:space="preserve">
+    <value>Error!</value>
+    <comment>Title 'error' of display alert</comment>
+  </data>
+  <data name="AlertTitleMessage" xml:space="preserve">
+    <value>Message</value>
+    <comment>Title 'Message' of display alert</comment>
+  </data>
+  <data name="AlertTitlePasswordProblem" xml:space="preserve">
+    <value>Password problem!</value>
+    <comment>Title 'Password problem' of display alert</comment>
+  </data>
+  <data name="AlertTitleSuccess" xml:space="preserve">
+    <value>Success!</value>
+    <comment>Title 'success' of display alert</comment>
+  </data>
+  <data name="InternetConnectionLoss" xml:space="preserve">
+    <value>Check for your internet connection.</value>
+    <comment>Message when there is no internet connection.</comment>
+  </data>
+  <data name="LoginPageForgotPassword" xml:space="preserve">
+    <value>Forgot your pasword?</value>
+    <comment>Sentence on button in the login page</comment>
+  </data>
+  <data name="LoginPageWelcome" xml:space="preserve">
+    <value>Welcome to Beeple!</value>
+    <comment>Sentence for showing in the login page</comment>
+  </data>
+  <data name="RegisterPageFirst" xml:space="preserve">
+    <value>First name</value>
+    <comment>First name to fill in in the register page</comment>
+  </data>
+  <data name="RegisterPageLast" xml:space="preserve">
+    <value>Last name</value>
+    <comment>Last name to fill in in the register page</comment>
+  </data>
+  <data name="SentenceFavoriteColorAnimal" xml:space="preserve">
+    <value>What's your favorite color and favorite animal?</value>
+    <comment>Sentence for security question 1</comment>
+  </data>
+  <data name="SentenceRefreshListToNormal" xml:space="preserve">
+    <value>Refresh the list to get back all orders.</value>
+    <comment>Label sentence to refresh orderslist</comment>
+  </data>
+  <data name="SentenceResponsible" xml:space="preserve">
+    <value>Check if you are the responsible one for today:</value>
+    <comment>Label sentence in the sandwiches page</comment>
+  </data>
+  <data name="SentenceToy" xml:space="preserve">
+    <value>What was the name of your first toy?</value>
+    <comment>Sentence for security question 2</comment>
+  </data>
+  <data name="SettingsPageLogout" xml:space="preserve">
+    <value>Logout</value>
+    <comment>Logout in the settings page</comment>
+  </data>
+  <data name="StringAmount" xml:space="preserve">
+    <value>Amount:</value>
+    <comment>String amount</comment>
+  </data>
+  <data name="StringAnd" xml:space="preserve">
+    <value>and:</value>
+    <comment>String and </comment>
+  </data>
+  <data name="StringAnswerQuestionOne" xml:space="preserve">
+    <value>Answer question 1</value>
+    <comment>String for the answer of question 1</comment>
+  </data>
+  <data name="StringAnswerQuestionTwo" xml:space="preserve">
+    <value>Answer question 2</value>
+    <comment>String for the answer of question 2</comment>
+  </data>
+  <data name="StringCalculateTotalPrice" xml:space="preserve">
+    <value>Calculate total price</value>
+    <comment>String calculate total</comment>
+  </data>
+  <data name="StringConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+    <comment>String to confirm the password</comment>
+  </data>
+  <data name="StringDeleteAllSandwiches" xml:space="preserve">
+    <value>Delete all</value>
+    <comment>String delete all</comment>
+  </data>
+  <data name="StringEmail" xml:space="preserve">
+    <value>E-mail</value>
+    <comment>String e-mail</comment>
+  </data>
+  <data name="StringFilterEmail" xml:space="preserve">
+    <value>Filter: e-mail</value>
+    <comment>String e-mail filter</comment>
+  </data>
+  <data name="StringFilterOnEmail" xml:space="preserve">
+    <value>Filter on e-mail</value>
+    <comment>String filter on e-mail</comment>
+  </data>
+  <data name="StringLogin" xml:space="preserve">
+    <value>Login</value>
+    <comment>String for login</comment>
+  </data>
+  <data name="StringNormalList" xml:space="preserve">
+    <value>Normal list</value>
+    <comment>String normal list</comment>
+  </data>
+  <data name="StringOrder" xml:space="preserve">
+    <value>Order</value>
+    <comment>String order</comment>
+  </data>
+  <data name="StringPassword" xml:space="preserve">
+    <value>Password</value>
+    <comment>String password</comment>
+  </data>
+  <data name="StringRegister" xml:space="preserve">
+    <value>Register</value>
+    <comment>String register</comment>
+  </data>
+  <data name="StringResponsible" xml:space="preserve">
+    <value>Responsible</value>
+    <comment>String responsible</comment>
+  </data>
+  <data name="StringSauceMoney" xml:space="preserve">
+    <value>+0,20 for sauce</value>
+    <comment>String sauce money</comment>
+  </data>
+  <data name="StringShowHide" xml:space="preserve">
+    <value>Show/Hide</value>
+    <comment>This is on the button to show or hide the passwords and answers</comment>
+  </data>
+  <data name="StringSmos" xml:space="preserve">
+    <value>Smos:</value>
+    <comment>String smos</comment>
+  </data>
+  <data name="StringSmosMoney" xml:space="preserve">
+    <value>+0,50 for smos</value>
+    <comment>String smos money</comment>
+  </data>
+  <data name="StringSortBread" xml:space="preserve">
+    <value>Sort bread:</value>
+    <comment>String sort bread</comment>
+  </data>
+  <data name="StringTotal" xml:space="preserve">
+    <value>Total:</value>
+    <comment>String total</comment>
+  </data>
+  <data name="StringWhichSandwiche" xml:space="preserve">
+    <value>Which sandwiche:</value>
+    <comment>String which sandwiche</comment>
+  </data>
+  <data name="StringWhiteBrown" xml:space="preserve">
+    <value>White or brown</value>
+    <comment>String white or brown</comment>
+  </data>
+  <data name="StringWith" xml:space="preserve">
+    <value>With:</value>
+    <comment>String With</comment>
+  </data>
+  <data name="SuccessfullCheckin" xml:space="preserve">
+    <value>You are succesfully checked in, enjoy your workday!</value>
+    <comment>Message for checkin</comment>
+  </data>
+  <data name="SuccessfullCheckout" xml:space="preserve">
+    <value>You are succesfully checked out, see you next workday!</value>
+    <comment>Message for checkout</comment>
+  </data>
+  <data name="TitleLoginPage" xml:space="preserve">
+    <value>Login</value>
+    <comment>Title (login) of this page</comment>
+  </data>
+  <data name="TitlePasswordPage" xml:space="preserve">
+    <value>Change password</value>
+    <comment>Title (change password) of this page</comment>
+  </data>
+  <data name="TitleSandwichesOrdersPage" xml:space="preserve">
+    <value>All orders</value>
+    <comment>Title (All orders) of this page</comment>
+  </data>
+  <data name="TitleSandwichesPage" xml:space="preserve">
+    <value>Order sandwiches</value>
+    <comment>Title (order sandwiches) of this page</comment>
+  </data>
+  <data name="TitleSettingsPage" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Title (Settings) of this page</comment>
+  </data>
+  <data name="NewRoomPageExampleName" xml:space="preserve">
+    <value>Example: 1.01</value>
+    <comment>String example room name</comment>
+  </data>
+  <data name="RoomsPageAddedPersons" xml:space="preserve">
+    <value>Added persons:</value>
+    <comment>String on the rooms page</comment>
+  </data>
+  <data name="RoomsPageBringThis" xml:space="preserve">
+    <value>Bring this:</value>
+    <comment>String on the rooms page</comment>
+  </data>
+  <data name="SentenceRoomsFilterPage" xml:space="preserve">
+    <value>Choose start time, end time and date:</value>
+    <comment>Sentence on the filter rooms page</comment>
+  </data>
+  <data name="StringAdd" xml:space="preserve">
+    <value>Add</value>
+    <comment>String add</comment>
+  </data>
+  <data name="StringChooseWho" xml:space="preserve">
+    <value>Choose who:</value>
+    <comment>String choose who</comment>
+  </data>
+  <data name="StringDetails" xml:space="preserve">
+    <value>Details</value>
+    <comment>String Details</comment>
+  </data>
+  <data name="StringEnd" xml:space="preserve">
+    <value>End:</value>
+    <comment>String end</comment>
+  </data>
+  <data name="StringFilterList" xml:space="preserve">
+    <value>Filter list</value>
+    <comment>StringFilterList</comment>
+  </data>
+  <data name="StringFilterRoomDate" xml:space="preserve">
+    <value>Filter room/date</value>
+    <comment>String filter on room/date</comment>
+  </data>
+  <data name="StringFilterTimeDate" xml:space="preserve">
+    <value>Filter time/date</value>
+    <comment>String filter on time/date</comment>
+  </data>
+  <data name="StringLaptops" xml:space="preserve">
+    <value>Laptops</value>
+    <comment>String laptops</comment>
+  </data>
+  <data name="StringMaterial" xml:space="preserve">
+    <value>Material:</value>
+    <comment>String material</comment>
+  </data>
+  <data name="StringRoom" xml:space="preserve">
+    <value>Room:</value>
+    <comment>String room</comment>
+  </data>
+  <data name="StringStart" xml:space="preserve">
+    <value>Start:</value>
+    <comment>String start</comment>
+  </data>
+  <data name="StringSubmit" xml:space="preserve">
+    <value>Submit</value>
+    <comment>String submit</comment>
+  </data>
+  <data name="TitleFilterRoomsPage" xml:space="preserve">
+    <value>Filtered roomlist</value>
+    <comment>Title (Filtered roomlist) of this page</comment>
+  </data>
+  <data name="TitleNewRoomPage" xml:space="preserve">
+    <value>New room reservation</value>
+    <comment>String and title new room page</comment>
+  </data>
+  <data name="TitleRoomsPage" xml:space="preserve">
+    <value>All reservations</value>
+    <comment>Title (All Reservations) of this page</comment>
+  </data>
+  <data name="AlertSentenceEventsNoEvent" xml:space="preserve">
+    <value>There is no event with this date and name.</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceEventsPermission" xml:space="preserve">
+    <value>You don't have permission to do that.</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceEventsSuccessfully" xml:space="preserve">
+    <value>You have successfully changed your present status for the event.</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceEventsWrong" xml:space="preserve">
+    <value>Something has gone wrong with the events! Please try again.</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceFilterEventsNoEvents" xml:space="preserve">
+    <value>There are no events for this date or between the time you have chosen.</value>
+    <comment>This is a sentence for the alert in the filter events page</comment>
+  </data>
+  <data name="AlertSentenceFilterEventsWrong" xml:space="preserve">
+    <value>Something has gone wrong with the filtering of the events! Please try again.</value>
+    <comment>This is a sentence for the alert in the filter events page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsAboveZero" xml:space="preserve">
+    <value>Pick times above 00:00:00 please!</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsCheck" xml:space="preserve">
+    <value>Check to make sure you picked a room.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsDefault" xml:space="preserve">
+    <value>If you didn't chose a date and the times, they have default values.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsLater" xml:space="preserve">
+    <value>Make sure the end time is later then the start time.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsNoReservations" xml:space="preserve">
+    <value>There are no reservations for this room or between the time you have chosen.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsWrong" xml:space="preserve">
+    <value>Something has gone wrong with the filtering of the rooms! Please try again.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceNewEventAlreadyEvent" xml:space="preserve">
+    <value>The event couldn't be made, because there is already an event on that time.</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewEventFilled" xml:space="preserve">
+    <value>Make sure the inputfields (where, sort event &amp; name) are filled in!</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewEventSuccessfully" xml:space="preserve">
+    <value>You have successfully made the event.</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewEventWrong" xml:space="preserve">
+    <value>Something has gone wrong with adding the new event! Please try again.</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationAlreadyReservation" xml:space="preserve">
+    <value>The room couldn't be reserved, because there is already a reservation.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationAlreadyUsed" xml:space="preserve">
+    <value>Fill in the room's name or use another one, because it's already used.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationRoomNameAdded" xml:space="preserve">
+    <value>The room's name has been added to the list.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationStartTimeBigger" xml:space="preserve">
+    <value>The time to start could not be later or the same then the time to end!</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationSuccessfully" xml:space="preserve">
+    <value>You have succesfully reserved the room.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationWrong" xml:space="preserve">
+    <value>Something has gone wrong with adding the new room reservation! Please try again.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceRoomsPage" xml:space="preserve">
+    <value>Something has gone wrong with the roomslist! Please try again.</value>
+    <comment>This is a sentence for the alert in the rooms page</comment>
+  </data>
+  <data name="StringFDProvided" xml:space="preserve">
+    <value>Food and drinks provided:</value>
+    <comment>String food drinks provided</comment>
+  </data>
+  <data name="StringFilterDate" xml:space="preserve">
+    <value>Filter date</value>
+    <comment>String filter date</comment>
+  </data>
+  <data name="StringFilterTime" xml:space="preserve">
+    <value>Filter time</value>
+    <comment>String filter time</comment>
+  </data>
+  <data name="StringFoodDrinks" xml:space="preserve">
+    <value>Food and drinks:</value>
+    <comment>String food and drinks</comment>
+  </data>
+  <data name="StringInvitedPersons" xml:space="preserve">
+    <value>Invited persons:</value>
+    <comment>String invited persons</comment>
+  </data>
+  <data name="StringNameEvent" xml:space="preserve">
+    <value>Name event:</value>
+    <comment>String name event</comment>
+  </data>
+  <data name="StringNewEvent" xml:space="preserve">
+    <value>New event</value>
+    <comment>String new event</comment>
+  </data>
+  <data name="StringNo" xml:space="preserve">
+    <value>No</value>
+    <comment>String No</comment>
+  </data>
+  <data name="StringOrganiser" xml:space="preserve">
+    <value>Organiser:</value>
+    <comment>String organiser</comment>
+  </data>
+  <data name="StringPresent" xml:space="preserve">
+    <value>Present:</value>
+    <comment>String present</comment>
+  </data>
+  <data name="StringPresentButton" xml:space="preserve">
+    <value>Present</value>
+    <comment>String present</comment>
+  </data>
+  <data name="StringRequirements" xml:space="preserve">
+    <value>Requirements:</value>
+    <comment>String requirements</comment>
+  </data>
+  <data name="StringSortEvent" xml:space="preserve">
+    <value>Sort event:</value>
+    <comment>String sort event</comment>
+  </data>
+  <data name="StringTProvided" xml:space="preserve">
+    <value>Transport provided:</value>
+    <comment>String transport provided</comment>
+  </data>
+  <data name="StringTransport" xml:space="preserve">
+    <value>Transport:</value>
+    <comment>String transport</comment>
+  </data>
+  <data name="StringWhere" xml:space="preserve">
+    <value>Where:</value>
+    <comment>String where</comment>
+  </data>
+  <data name="StringYes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>String yes</comment>
+  </data>
+  <data name="TitleEventsPage" xml:space="preserve">
+    <value>All events</value>
+    <comment>Title (All events) of this page</comment>
+  </data>
+  <data name="TitleFilterEventsPage" xml:space="preserve">
+    <value>Filtered eventslist</value>
+    <comment>Title (Filtered eventslist) of this page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageValidate" xml:space="preserve">
+    <value>The filled-in E-mail field does not meet the requirements of an e-mail address. Please enter a correct e-mail adress.  </value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="StringDate" xml:space="preserve">
+    <value>Date: </value>
+    <comment>String date</comment>
+  </data>
+  <data name="StringTime" xml:space="preserve">
+    <value>Time: </value>
+    <comment>String time </comment>
+  </data>
+  <data name="StringSentenceSmos" xml:space="preserve">
+    <value>True = smos / False = no smos</value>
+    <comment>Sentence to explain true and false </comment>
+  </data>
+</root>

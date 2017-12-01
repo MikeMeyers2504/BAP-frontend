@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.RegisterPage">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="EStyle" TargetType="Entry">
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="LStyle" TargetType="Label">
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <AbsoluteLayout
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="CenterAndExpand">
+    <Grid RowSpacing="5">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="10" />
+        <ColumnDefinition Width="auto" />
+        <ColumnDefinition Width="10" />
+      </Grid.ColumnDefinitions>
+
+      <Entry x:Name="LastName" Keyboard="Text" Grid.Row="1" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding LastName}"></Entry>
+      <Entry x:Name="FirstName" Keyboard="Text" Grid.Row="2" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding FirstName}"></Entry>
+      <Entry x:Name="Email" Keyboard="Email" Grid.Row="3" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding Email}"></Entry>
+      <Entry x:Name="Password" IsPassword="True" Grid.Row="4" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding Password}"></Entry>
+      <Entry x:Name="PasswordCheck" IsPassword="True" Grid.Row="5" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding PasswordCheck}"></Entry>
+      <Label x:Name="QuestionOne" Style="{StaticResource LStyle}" Grid.Row="6" Grid.Column="1" ></Label>
+      <Label x:Name="QuestionTwo" Style="{StaticResource LStyle}" Grid.Row="7" Grid.Column="1"></Label>
+      <Entry x:Name="SecretOne" IsPassword="True" Grid.Row="8" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding SecretOne}"></Entry>
+      <Entry x:Name="SecretTwo" IsPassword="True" Grid.Row="9" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding SecretTwo}"></Entry>
+      <Button x:Name="RegisterButton" Style="{StaticResource BStyle}" Grid.Row="10" Grid.Column="1" Command="{Binding PostUserCommand}"></Button>
+      <Button x:Name="ShowOrHideButton" Style="{StaticResource BStyle}" Grid.Row="11" Grid.Column="1" Command="{Binding ShowOrHideCommand}"></Button>
+    </Grid>
+    
+    <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="Black" IsEnabled="true"
+            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="PositionProportional"
+     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" />
+  </AbsoluteLayout>
+  
+</ContentPage>

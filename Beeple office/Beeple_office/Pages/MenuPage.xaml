@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.MenuPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BStyleOne" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <Grid RowSpacing="5" Margin="5">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2*" />
+      <RowDefinition Height="3*" />
+      <RowDefinition Height="3*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    
+    <Image x:Name="Logo" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Source="logo.png"></Image>
+    <Button x:Name="McButton" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding ToChecksPageCommand}" Style="{StaticResource BStyleOne}"></Button> 
+    <Button x:Name="MsButton" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Command="{Binding ToSandwichesPageCommand}" Style="{StaticResource BStyleOne}"></Button>
+    <Button x:Name="MrButton" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding ToRoomsPageCommand}" Style="{StaticResource BStyleOne}"></Button>
+    <Button x:Name="MeButton" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Command="{Binding ToEventsPageCommand}" Style="{StaticResource BStyleOne}"></Button>
+  </Grid>
+</ContentPage>

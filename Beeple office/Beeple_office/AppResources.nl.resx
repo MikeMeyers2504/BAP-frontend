@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlertOk" xml:space="preserve">
+    <value>OK</value>
+    <comment>Button 'OK' of display alert</comment>
+  </data>
+  <data name="AlertSentenceAllSandwichesPageSuccess" xml:space="preserve">
+    <value>U heef alle bestellingen succesvol verwijderd.</value>
+    <comment>This is a sentence for the alert in the all sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceAllSandwichesPageWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met het ophalen of verwijderen van de bestelde sandwiches! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the all sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceCheckinCheckoutPage" xml:space="preserve">
+    <value>Er is iets fout gegaan met de checkin/checkout! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the checkin/checkout page</comment>
+  </data>
+  <data name="AlertSentenceEventsNoEvent" xml:space="preserve">
+    <value>Er is geen evenement met de gekozen datum en naam.</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceEventsPermission" xml:space="preserve">
+    <value>U heeft geen toestemming om dat te doen.</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceEventsSuccessfully" xml:space="preserve">
+    <value>U heeft succesvol uw aanwezigheidsstatus veranderd voor het event</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceEventsWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met de evenementen! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the events page</comment>
+  </data>
+  <data name="AlertSentenceFilterEventsNoEvents" xml:space="preserve">
+    <value>Er zijn geen evenementen voor de datum of tussen de tijden die u heeft gekozen.</value>
+    <comment>This is a sentence for the alert in the filter events page</comment>
+  </data>
+  <data name="AlertSentenceFilterEventsWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met het filteren van de evenementen! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the filter events page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsAboveZero" xml:space="preserve">
+    <value>Kies tijden later dan 00:00:00 alstublieft !</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsCheck" xml:space="preserve">
+    <value>Controleer of u een kamer heeft gekozen.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsDefault" xml:space="preserve">
+    <value>Als u geen datum en tijden heeft gekozen, hebben ze standaard waarden.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsLater" xml:space="preserve">
+    <value>Zorg ervoor dat de eindtijd later is dan de starttijd.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsNoReservations" xml:space="preserve">
+    <value>Er zijn geen reserveringen voor deze kamer of tussen de tijden die u heeft gekozen.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceFilterRoomsWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met het filteren van de kamers! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the filter rooms page</comment>
+  </data>
+  <data name="AlertSentenceLoginPageFill" xml:space="preserve">
+    <value>Mislukt om in te loggen, zorg ervoor dat u het wachtwoord en e-mail invult.</value>
+    <comment>This is a sentence for the alert in the login page</comment>
+  </data>
+  <data name="AlertSentenceLoginPageRight" xml:space="preserve">
+    <value>Mislukt om in te loggen, zorg ervoor dat u het juiste wachtwoord en e-mail gebruikt.</value>
+    <comment>This is a sentence for the alert in the login page</comment>
+  </data>
+  <data name="AlertSentenceLoginPageWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met de login! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the login page</comment>
+  </data>
+  <data name="AlertSentenceNewEventAlreadyEvent" xml:space="preserve">
+    <value>Het evenement kon niet worden aangemaakt, omdat er al één is op dat moment.</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewEventFilled" xml:space="preserve">
+    <value>Zorg ervoor dat de inputvelden (waar, soort evenement en naam) worden ingevuld!</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewEventSuccessfully" xml:space="preserve">
+    <value>U heeft succesvol het evenement aangemaakt.</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewEventWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met het toevoegen van het event! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the new event page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationAlreadyReservation" xml:space="preserve">
+    <value>De kamer kan niet gereserveerd worden, omdat er al reeds een reservering plaatsvindt.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationAlreadyUsed" xml:space="preserve">
+    <value>Vul de naam van de kamer in of gebruik een andere, omdat deze al in gebruik is.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationRoomNameAdded" xml:space="preserve">
+    <value>De naam van de kamer is toegevoegd aan de lijst.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationStartTimeBigger" xml:space="preserve">
+    <value>De tijd om te starten kan niet later dan of hetzelfde zijn als de eindtijd.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationSuccessfully" xml:space="preserve">
+    <value>U heeft succesvol de kamer gereserveerd.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceNewRoomReservationWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met het toevoegen van de kamerreservering! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the new room reservation page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageNotYet" xml:space="preserve">
+    <value>Niet alle velden zijn ingevuld!</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPagePartOneSuccessfully" xml:space="preserve">
+    <value>U heeft uw bestelling succesvol besteld voor </value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPagePartTwoSuccessfully" xml:space="preserve">
+    <value>, geniet van uw maaltijd!</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageResponsible" xml:space="preserve">
+    <value>U bent de verantwoordelijke voor vandaag. Nadat er op OK is gedrukt, kunt u alle bestellingen zien.</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageResponsibleNot" xml:space="preserve">
+    <value>U bent niet de verantwoordelijke van vandaag, geniet van uw maaltijd.</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentenceOrderSandwichesPageWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met uw bestelling! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the order sandwiches page</comment>
+  </data>
+  <data name="AlertSentencePasswordPageChanged" xml:space="preserve">
+    <value>Uw wachtwoord is veranderd!</value>
+    <comment>This is a sentence for the alert in the password page</comment>
+  </data>
+  <data name="AlertSentencePasswordPageEmpty" xml:space="preserve">
+    <value>Sommige of alle velden zijn leeg, vult u ze alstublieft in om uw wachtwoord te kunnen wijzigen.</value>
+    <comment>This is a sentence for the alert in the password page</comment>
+  </data>
+  <data name="AlertSentencePasswordPageWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met het veranderen van uw wachtwoord! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the password page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageCreated" xml:space="preserve">
+    <value>Uw account is aangemaakt.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageEmpty" xml:space="preserve">
+    <value>Sommige of alle velden zijn leeg, vult u ze alstublieft in om uw account te registreren.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageNotMatch" xml:space="preserve">
+    <value>Het nieuwe wachtwoord en bevestigingswachtwoord komen niet overeen, vul ze alstublieft terug in.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageTaken" xml:space="preserve">
+    <value>Het account met die e-mail is al in gebruik, gebruik alstublieft een andere email.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageWrong" xml:space="preserve">
+    <value>Er is iets fout gegaan met het registreren van uw account! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="AlertSentenceRoomsPage" xml:space="preserve">
+    <value>Er is iets fout gegaan met de kamerlijst! Probeer het opnieuw.</value>
+    <comment>This is a sentence for the alert in the rooms page</comment>
+  </data>
+  <data name="AlertTitleAccount" xml:space="preserve">
+    <value>Account</value>
+    <comment>Title 'Account' of display alert</comment>
+  </data>
+  <data name="AlertTitleAccountDuplicate" xml:space="preserve">
+    <value>Account duplicaat!</value>
+    <comment>Title 'Account duplicate' of display alert</comment>
+  </data>
+  <data name="AlertTitleEmpty" xml:space="preserve">
+    <value>Leeg!</value>
+    <comment>Title 'Empty' of display alert</comment>
+  </data>
+  <data name="AlertTitleError" xml:space="preserve">
+    <value>Fout!</value>
+    <comment>Title 'error' of display alert</comment>
+  </data>
+  <data name="AlertTitleMessage" xml:space="preserve">
+    <value>Bericht</value>
+    <comment>Title 'Message' of display alert</comment>
+  </data>
+  <data name="AlertTitlePasswordProblem" xml:space="preserve">
+    <value>Probleem met het wachtwoord!</value>
+    <comment>Title 'Password problem' of display alert</comment>
+  </data>
+  <data name="AlertTitleSuccess" xml:space="preserve">
+    <value>Succes!</value>
+    <comment>Title 'success' of display alert</comment>
+  </data>
+  <data name="ChInButton" xml:space="preserve">
+    <value>Check in</value>
+    <comment>Button to checkin</comment>
+  </data>
+  <data name="ChOuButton" xml:space="preserve">
+    <value>Check uit</value>
+    <comment>Button to checkout</comment>
+  </data>
+  <data name="Dutch" xml:space="preserve">
+    <value>Nederlands</value>
+    <comment>Button for changing the language to Dutch</comment>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Engels</value>
+    <comment>Button for changing the language to English</comment>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>Frans</value>
+    <comment>Button for changing the language to French</comment>
+  </data>
+  <data name="InternetConnectionLoss" xml:space="preserve">
+    <value>Controleer op uw internet verbinding.</value>
+    <comment>Message when there is no internet connection.</comment>
+  </data>
+  <data name="LoginPageForgotPassword" xml:space="preserve">
+    <value>Uw wachtwoord vergeten?</value>
+    <comment>Sentence on button in the login page</comment>
+  </data>
+  <data name="LoginPageWelcome" xml:space="preserve">
+    <value>Welkom bij Beeple!</value>
+    <comment>Sentence for showing in the login page</comment>
+  </data>
+  <data name="McButton" xml:space="preserve">
+    <value>Check in/uit</value>
+    <comment>Menu button for going to the C page</comment>
+  </data>
+  <data name="MeButton" xml:space="preserve">
+    <value>Evenementen</value>
+    <comment>Menu button for going to the E page</comment>
+  </data>
+  <data name="MrButton" xml:space="preserve">
+    <value>Kamers</value>
+    <comment>Menu button for going to the R page</comment>
+  </data>
+  <data name="MsButton" xml:space="preserve">
+    <value>Sandwiches</value>
+    <comment>Menu button for going to the S page</comment>
+  </data>
+  <data name="NewRoomPageExampleName" xml:space="preserve">
+    <value>Voorbeeld: 1.01</value>
+    <comment>String example room name</comment>
+  </data>
+  <data name="RegisterPageFirst" xml:space="preserve">
+    <value>Voornaam</value>
+    <comment>First name to fill in in the register page</comment>
+  </data>
+  <data name="RegisterPageLast" xml:space="preserve">
+    <value>Achternaam</value>
+    <comment>Last name to fill in in the register page</comment>
+  </data>
+  <data name="RoomsPageAddedPersons" xml:space="preserve">
+    <value>Toegevoegde personen:</value>
+    <comment>String on the rooms page</comment>
+  </data>
+  <data name="RoomsPageBringThis" xml:space="preserve">
+    <value>Neem dit mee:</value>
+    <comment>String on the rooms page</comment>
+  </data>
+  <data name="SentenceFavoriteColorAnimal" xml:space="preserve">
+    <value>Wat is uw favoriete kleur en favoriete dier?</value>
+    <comment>Sentence for security question 1</comment>
+  </data>
+  <data name="SentenceRefreshListToNormal" xml:space="preserve">
+    <value>Ververs de lijst om alle bestellingen terug te krijgen.</value>
+    <comment>Label sentence to refresh orderslist</comment>
+  </data>
+  <data name="SentenceResponsible" xml:space="preserve">
+    <value>Check of u vandaag de verantwoordelijke bent:</value>
+    <comment>Label sentence in the sandwiches page</comment>
+  </data>
+  <data name="SentenceRoomsFilterPage" xml:space="preserve">
+    <value>Kies de starttijd, eindtijd en datum :</value>
+    <comment>Sentence on the filter rooms page</comment>
+  </data>
+  <data name="SentenceToy" xml:space="preserve">
+    <value>Wat was de naam van uw eerste speelgoed?</value>
+    <comment>Sentence for security question 2</comment>
+  </data>
+  <data name="SettingsPageLogout" xml:space="preserve">
+    <value>Log uit</value>
+    <comment>Logout in the settings page</comment>
+  </data>
+  <data name="StringAdd" xml:space="preserve">
+    <value>Voeg toe</value>
+    <comment>String add</comment>
+  </data>
+  <data name="StringAmount" xml:space="preserve">
+    <value>Aantal:</value>
+    <comment>String amount</comment>
+  </data>
+  <data name="StringAnd" xml:space="preserve">
+    <value>en:</value>
+    <comment>String and </comment>
+  </data>
+  <data name="StringAnswerQuestionOne" xml:space="preserve">
+    <value>Antwoord vraag 1</value>
+    <comment>String for the answer of question 1</comment>
+  </data>
+  <data name="StringAnswerQuestionTwo" xml:space="preserve">
+    <value>Antwoord vraag 2</value>
+    <comment>String for the answer of question 2</comment>
+  </data>
+  <data name="StringCalculateTotalPrice" xml:space="preserve">
+    <value>Bereken totale prijs</value>
+    <comment>String calculate total</comment>
+  </data>
+  <data name="StringChooseWho" xml:space="preserve">
+    <value>Kies wie:</value>
+    <comment>String choose who</comment>
+  </data>
+  <data name="StringConfirmPassword" xml:space="preserve">
+    <value>Bevestig wachtwoord</value>
+    <comment>String to confirm the password</comment>
+  </data>
+  <data name="StringDeleteAllSandwiches" xml:space="preserve">
+    <value>Verwijder alles</value>
+    <comment>String delete all</comment>
+  </data>
+  <data name="StringDetails" xml:space="preserve">
+    <value>Details</value>
+    <comment>String Details</comment>
+  </data>
+  <data name="StringEmail" xml:space="preserve">
+    <value>E-mail</value>
+    <comment>String e-mail</comment>
+  </data>
+  <data name="StringEnd" xml:space="preserve">
+    <value>Einde:</value>
+    <comment>String end</comment>
+  </data>
+  <data name="StringFDProvided" xml:space="preserve">
+    <value>Eten en drinken voorzien:</value>
+    <comment>String food drinks provided</comment>
+  </data>
+  <data name="StringFilterDate" xml:space="preserve">
+    <value>Filter datum</value>
+    <comment>String filter date</comment>
+  </data>
+  <data name="StringFilterEmail" xml:space="preserve">
+    <value>Filter: e-mail</value>
+    <comment>String e-mail filter</comment>
+  </data>
+  <data name="StringFilterList" xml:space="preserve">
+    <value>Filter lijst</value>
+    <comment>StringFilterList</comment>
+  </data>
+  <data name="StringFilterOnEmail" xml:space="preserve">
+    <value>Filter op e-mail</value>
+    <comment>String filter on e-mail</comment>
+  </data>
+  <data name="StringFilterRoomDate" xml:space="preserve">
+    <value>Filter kamer/datum</value>
+    <comment>String filter on room/date</comment>
+  </data>
+  <data name="StringFilterTime" xml:space="preserve">
+    <value>Filter tijd</value>
+    <comment>String filter time</comment>
+  </data>
+  <data name="StringFilterTimeDate" xml:space="preserve">
+    <value>Filter tijd/datum</value>
+    <comment>String filter on time/date</comment>
+  </data>
+  <data name="StringFoodDrinks" xml:space="preserve">
+    <value>Eten en drinken:</value>
+    <comment>String food and drinks</comment>
+  </data>
+  <data name="StringInvitedPersons" xml:space="preserve">
+    <value>Uitgenodigde personen:</value>
+    <comment>String invited persons</comment>
+  </data>
+  <data name="StringLaptops" xml:space="preserve">
+    <value>Laptops</value>
+    <comment>String laptops</comment>
+  </data>
+  <data name="StringLogin" xml:space="preserve">
+    <value>Login</value>
+    <comment>String for login</comment>
+  </data>
+  <data name="StringMaterial" xml:space="preserve">
+    <value>Materiaal:</value>
+    <comment>String material</comment>
+  </data>
+  <data name="StringNameEvent" xml:space="preserve">
+    <value>Naam evenement:</value>
+    <comment>String name event</comment>
+  </data>
+  <data name="StringNewEvent" xml:space="preserve">
+    <value>Nieuw evenement</value>
+    <comment>String new event</comment>
+  </data>
+  <data name="StringNo" xml:space="preserve">
+    <value>Nee</value>
+    <comment>String No</comment>
+  </data>
+  <data name="StringNormalList" xml:space="preserve">
+    <value>Normale lijst</value>
+    <comment>String normal list</comment>
+  </data>
+  <data name="StringOrder" xml:space="preserve">
+    <value>Bestel</value>
+    <comment>String order</comment>
+  </data>
+  <data name="StringOrganiser" xml:space="preserve">
+    <value>Organisator:</value>
+    <comment>String organiser</comment>
+  </data>
+  <data name="StringPassword" xml:space="preserve">
+    <value>Wachtwoord</value>
+    <comment>String password</comment>
+  </data>
+  <data name="StringPresent" xml:space="preserve">
+    <value>Aanwezig:</value>
+    <comment>String present</comment>
+  </data>
+  <data name="StringPresentButton" xml:space="preserve">
+    <value>Aanwezig</value>
+    <comment>String present</comment>
+  </data>
+  <data name="StringRegister" xml:space="preserve">
+    <value>Registreer</value>
+    <comment>String register</comment>
+  </data>
+  <data name="StringRequirements" xml:space="preserve">
+    <value>Vereisten:</value>
+    <comment>String requirements</comment>
+  </data>
+  <data name="StringResponsible" xml:space="preserve">
+    <value>Verantwoordelijke</value>
+    <comment>String responsible</comment>
+  </data>
+  <data name="StringRoom" xml:space="preserve">
+    <value>Kamer:</value>
+    <comment>String room</comment>
+  </data>
+  <data name="StringSauceMoney" xml:space="preserve">
+    <value>+0,20 voor saus</value>
+    <comment>String sauce money</comment>
+  </data>
+  <data name="StringShowHide" xml:space="preserve">
+    <value>Toon/Verberg</value>
+    <comment>This is on the button to show or hide the passwords and answers</comment>
+  </data>
+  <data name="StringSmos" xml:space="preserve">
+    <value>Smos:</value>
+    <comment>String smos</comment>
+  </data>
+  <data name="StringSmosMoney" xml:space="preserve">
+    <value>+0,50 voor smos</value>
+    <comment>String smos money</comment>
+  </data>
+  <data name="StringSortBread" xml:space="preserve">
+    <value>Soort brood:</value>
+    <comment>String sort bread</comment>
+  </data>
+  <data name="StringSortEvent" xml:space="preserve">
+    <value>Soort evenement:</value>
+    <comment>String sort event</comment>
+  </data>
+  <data name="StringStart" xml:space="preserve">
+    <value>Start:</value>
+    <comment>String start</comment>
+  </data>
+  <data name="StringSubmit" xml:space="preserve">
+    <value>Bevestig</value>
+    <comment>String submit</comment>
+  </data>
+  <data name="StringTotal" xml:space="preserve">
+    <value>Totaal:</value>
+    <comment>String total</comment>
+  </data>
+  <data name="StringTProvided" xml:space="preserve">
+    <value>Vervoer voorzien:</value>
+    <comment>String transport provided</comment>
+  </data>
+  <data name="StringTransport" xml:space="preserve">
+    <value>Vervoer:</value>
+    <comment>String transport</comment>
+  </data>
+  <data name="StringWhere" xml:space="preserve">
+    <value>Waar:</value>
+    <comment>String where</comment>
+  </data>
+  <data name="StringWhichSandwiche" xml:space="preserve">
+    <value>Welke sandwiche:</value>
+    <comment>String which sandwiche</comment>
+  </data>
+  <data name="StringWhiteBrown" xml:space="preserve">
+    <value>Wit of bruin</value>
+    <comment>String white or brown</comment>
+  </data>
+  <data name="StringWith" xml:space="preserve">
+    <value>Met:</value>
+    <comment>String With</comment>
+  </data>
+  <data name="StringYes" xml:space="preserve">
+    <value>Ja</value>
+    <comment>String yes</comment>
+  </data>
+  <data name="SuccessfullCheckin" xml:space="preserve">
+    <value>U bent succesvol ingecheckt, geniet van uw werkdag!</value>
+    <comment>Message for checkin</comment>
+  </data>
+  <data name="SuccessfullCheckout" xml:space="preserve">
+    <value>U bent succesvol uitgecheckt, tot volgende werkdag!</value>
+    <comment>Message for checkout</comment>
+  </data>
+  <data name="TitleCheckinCheckoutPage" xml:space="preserve">
+    <value>Check in/uit</value>
+    <comment>Title (Checkin/checkout) of this page</comment>
+  </data>
+  <data name="TitleEventsPage" xml:space="preserve">
+    <value>Alle evenementen</value>
+    <comment>Title (All events) of this page</comment>
+  </data>
+  <data name="TitleFilterEventsPage" xml:space="preserve">
+    <value>Gefilterde evenementenlijst</value>
+    <comment>Title (Filtered eventslist) of this page</comment>
+  </data>
+  <data name="TitleFilterRoomsPage" xml:space="preserve">
+    <value>Gefilterde kamerlijst</value>
+    <comment>Title (Filtered roomlist) of this page</comment>
+  </data>
+  <data name="TitleLoginPage" xml:space="preserve">
+    <value>Login</value>
+    <comment>Title (login) of this page</comment>
+  </data>
+  <data name="TitleMenuPage" xml:space="preserve">
+    <value>Menu</value>
+    <comment>Title (Menu) of this page</comment>
+  </data>
+  <data name="TitleNewRoomPage" xml:space="preserve">
+    <value>Nieuwe kamer reservering</value>
+    <comment>String and title new room page</comment>
+  </data>
+  <data name="TitlePasswordPage" xml:space="preserve">
+    <value>Verander wachtwoord</value>
+    <comment>Title (change password) of this page</comment>
+  </data>
+  <data name="TitleRoomsPage" xml:space="preserve">
+    <value>Alle reserveringen</value>
+    <comment>Title (All Reservations) of this page</comment>
+  </data>
+  <data name="TitleSandwichesOrdersPage" xml:space="preserve">
+    <value>Alle bestellingen</value>
+    <comment>Title (All orders) of this page</comment>
+  </data>
+  <data name="TitleSandwichesPage" xml:space="preserve">
+    <value>Bestel sandwiches</value>
+    <comment>Title (order sandwiches) of this page</comment>
+  </data>
+  <data name="TitleSettingsPage" xml:space="preserve">
+    <value>Instellingen</value>
+    <comment>Title (Settings) of this page</comment>
+  </data>
+  <data name="AlertSentenceRegisterPageValidate" xml:space="preserve">
+    <value>Het ingevulde veld E-mail voldoet niet aan de vereisten van een e-mail. Vul alstublieft een juist e-mail adres in.</value>
+    <comment>This is a sentence for the alert in the register page</comment>
+  </data>
+  <data name="StringDate" xml:space="preserve">
+    <value>Datum: </value>
+    <comment>String date</comment>
+  </data>
+  <data name="StringTime" xml:space="preserve">
+    <value>Tijd: </value>
+    <comment>String time </comment>
+  </data>
+  <data name="StringSentenceSmos" xml:space="preserve">
+    <value>True = smos / False = geen smos</value>
+    <comment>Sentence to explain true and false </comment>
+  </data>
+</root>

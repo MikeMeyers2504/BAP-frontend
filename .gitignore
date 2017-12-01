@@ -1,0 +1,84 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# NuGet Packages Directory
+packages/
+*.nuget.targets
+*.lock.json
+*.nuget.props
+
+# Autosave files
+
+*~
+
+
+# Mac bundle stuff
+
+*.dmg
+
+*.app
+
+
+
+# resharper
+
+*_Resharper.*
+
+*.Resharper
+
+
+
+# dotCover
+
+*.dotCover
+
+Droid/Resources/Resource.designer.cs
+
+# globs
+
+Makefile.in
+
+*.DS_Store
+
+*.sln.cache
+
+*.suo
+
+*.cache
+
+*.pidb
+
+*.userprefs
+
+*.usertasks
+
+config.log
+
+config.make
+
+config.status
+
+aclocal.m4
+
+install-sh
+
+autom4te.cache/
+
+*.user
+
+*.tar.gz
+
+tarballs/
+
+test-results/
+
+Thumbs.db

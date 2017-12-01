@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.HamburgerMenu">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BStyleOne" TargetType="Button">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+        <Setter Property="BorderRadius">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Int32" Tablet="10" Phone="5"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="BStyleTwo" TargetType="Button">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="BackgroundColor" Value="Orange" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+        <Setter Property="BorderRadius">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Int32" Tablet="10" Phone="5"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="4*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Button Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" x:Name="DuButton" Style="{StaticResource BStyleTwo}" Command="{Binding ChangeToDutchCommand}" />
+    <Button Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" x:Name="EngButton" Style="{StaticResource BStyleTwo}" Command="{Binding ChangeToEnglishCommand}" />
+    <Button Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" x:Name="FrButton" Style="{StaticResource BStyleTwo}" Command="{Binding ChangeToFrenchCommand}" />
+    <Button Grid.Row="7" Grid.Column="1" Grid.RowSpan="2" x:Name="LogoutButton" Style="{StaticResource BStyleOne}" IsVisible="{Binding LoggedIn}" Command="{Binding GoHomeCommand}" />
+  </Grid>
+</ContentPage>

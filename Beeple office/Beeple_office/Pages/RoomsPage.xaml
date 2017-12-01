@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.RoomsPage"
+             x:Name="AllRoomsPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="BStyleTwo" TargetType="Button">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ListStyle" TargetType="ListView">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="RowHeight">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Int32" Tablet="75" Phone="50"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ListStyleTwo" TargetType="ListView">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="RowHeight">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Int32" Tablet="30" Phone="20"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="LStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ListviewLStyle" TargetType="Label">
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <AbsoluteLayout
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="CenterAndExpand">
+
+    <Grid RowSpacing="5">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="10" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="10" />
+      </Grid.ColumnDefinitions>
+      
+      <Label x:Name="LabelDate" Text="{Binding TodayDate, StringFormat='{0:MMM dd, yyyy}'}" Style="{StaticResource LStyle}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></Label>
+      <ListView x:Name="ListRooms" Style="{StaticResource ListStyle}" ItemsSource="{Binding ReservedRoomsList}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+
+              <Grid RowSpacing="5" Padding="3">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                  <Label Style="{StaticResource ListviewLStyle}" Text="{Binding Path=BindingContext. LabelStart, Source={x:Reference Name=AllRoomsPage}}" HorizontalOptions="Start"></Label>
+                  <Label Style="{StaticResource ListviewLStyle}" Text="{Binding Start, StringFormat='{}{0:hh\\:mm}'}" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                  <Label Style="{StaticResource ListviewLStyle}" Text="{Binding Path=BindingContext. LabelEnd, Source={x:Reference Name=AllRoomsPage}}" HorizontalOptions="Start"></Label>
+                  <Label Style="{StaticResource ListviewLStyle}" Text="{Binding End, StringFormat='{}{0:hh\\:mm}'}" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>               
+                <Label Style="{StaticResource ListviewLStyle}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Text="{Binding Email}" />
+                <Label Style="{StaticResource ListviewLStyle}" Grid.Row="2" Grid.Column="1" Text="{Binding Room}" HorizontalOptions="Center"/>
+                <Button Style="{StaticResource BStyleTwo}" Grid.Row="0" Grid.RowSpan="3" Grid.Column="2" Text="{Binding Path=BindingContext. NameButton, Source={x:Reference Name=AllRoomsPage}}" CommandParameter="{Binding}" Command="{Binding Path=BindingContext. GoToSmallViewCommand, Source={x:Reference Name=AllRoomsPage}}"></Button>
+              </Grid>
+
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Label x:Name="LabelBring" Style="{StaticResource LStyle}" Grid.Row="4" Grid.Column="1"></Label>
+      <Label Text="{Binding Extra}" Style="{StaticResource LStyle}" Grid.Row="4" Grid.Column="2"></Label>
+      <Label x:Name="LabelPersons" Style="{StaticResource LStyle}" Grid.Row="5" Grid.Column="1"></Label>
+      <ListView Grid.Row="5" Grid.Column="2" Style="{StaticResource ListStyleTwo}" ItemsSource="{Binding ShowPersonsOffReservedRoom}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Label Style="{StaticResource ListviewLStyle}" HorizontalOptions="Start" Text="{Binding FirstName}"/>
+                <Label Style="{StaticResource ListviewLStyle}" HorizontalOptions="StartAndExpand" Text="{Binding LastName}"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Button x:Name="FilterButton" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding GoToFilterPageCommand}" Style="{StaticResource BStyle}"></Button>
+      <Button x:Name="NewRoomReservationButton" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding GoToNewRoomPageCommand}" Style="{StaticResource BStyle}"></Button>
+    </Grid>
+    
+  <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="Black" IsEnabled="true"
+            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="PositionProportional"
+     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>
+  </AbsoluteLayout>
+</ContentPage>

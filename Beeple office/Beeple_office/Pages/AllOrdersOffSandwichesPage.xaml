@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.AllOrdersOffSandwichesPage">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="ListStyle" TargetType="ListView">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="RowHeight">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Int32" Tablet="150" Phone="75"/>
+          </Setter.Value>
+        </Setter> 
+      </Style>
+      <Style x:Key="BStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="EStyle" TargetType="Entry">
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="LStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="16" Phone="12"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ListLStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="12" Phone="8"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
+  <AbsoluteLayout
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="CenterAndExpand">
+    
+    <Grid RowSpacing="5" Padding="3">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="5*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      
+      <Entry x:Name="EntryFilter" Grid.Row="0" Grid.Column="1" Style="{StaticResource EStyle}" Text="{Binding SearchBarText}"></Entry>
+      <Label x:Name="LabelRefreshList" Grid.Row="1" Grid.Column="1" Style="{StaticResource LStyle}"></Label>
+      <Label x:Name="LabelSmosInfo" Grid.Row="2" Grid.Column="1" Style="{StaticResource LStyle}"></Label>
+      <ListView x:Name="Sandwiches" Style="{StaticResource ListStyle}" IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshCommand}"
+           IsRefreshing="{Binding IsRefreshing}" ItemsSource="{Binding Items}" Grid.Row="3" Grid.RowSpan="3" Grid.Column="1">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+              
+                <Label Text="{Binding Email}" Grid.Row="0" Grid.Column="0" Style="{StaticResource ListLStyle}"/>
+                <Label Text="{Binding TotalPrice, StringFormat='€{0:0.00}'}" Style="{StaticResource ListLStyle}" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="{Binding Vegetables, StringFormat='{0}'}" Style="{StaticResource ListLStyle}" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="{Binding Amount}" Style="{StaticResource ListLStyle}" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="{Binding SortBread}" Style="{StaticResource ListLStyle}" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="{Binding Bread}" Style="{StaticResource ListLStyle}" Grid.Row="1" Grid.Column="2"/>
+                <Label Text="{Binding SauceOne, StringFormat='{0}'}" Style="{StaticResource ListLStyle}" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="{Binding SauceTwo, StringFormat='{0}'}" Style="{StaticResource ListLStyle}" Grid.Row="2" Grid.Column="2"/>               
+              </Grid>
+              
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Button x:Name="FilterButton" Grid.Row="6" Grid.Column="1" Style="{StaticResource BStyle}" Command="{Binding FilterCommand}"></Button>
+      <Button x:Name="NormalButton" Grid.Row="7" Grid.Column="1" Style="{StaticResource BStyle}" Command="{Binding NormalCommand}"></Button>
+      <Button x:Name="DeleteButton" Grid.Row="8" Grid.Column="1" Style="{StaticResource BStyle}" Command="{Binding DeleteAllCommand}"></Button>
+      </Grid>  
+    <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="Black" IsEnabled="true"
+            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="PositionProportional"
+     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>
+  </AbsoluteLayout>
+</ContentPage>

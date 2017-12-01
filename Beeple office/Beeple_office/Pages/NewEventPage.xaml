@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.NewEventPage">
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="ListStyle" TargetType="ListView">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="RowHeight">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Int32" Tablet="75" Phone="50"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="BStyleOne" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="LStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ListviewLStyle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="12" Phone="9"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="EStyle" TargetType="Entry">
+        <Setter Property="Keyboard" Value="Chat" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <AbsoluteLayout
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="CenterAndExpand">
+
+    <Grid RowSpacing="5" Padding="3">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="10" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="10" />
+      </Grid.ColumnDefinitions>
+      
+      <Label x:Name="LabelSort" Grid.Row="0" Grid.Column="1" Style="{StaticResource LStyle}"/>
+      <Entry Text="{Binding SortEvent}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource EStyle}" Placeholder="Bv Teambuilding"/>
+      <Label x:Name="LabelWhere" Grid.Row="1" Grid.Column="1" Style="{StaticResource LStyle}"/>
+      <Entry Text="{Binding Where}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource EStyle}" Placeholder="Bv Schorre"/>
+      <Label x:Name="LabelReq" Grid.Row="2" Grid.Column="1" Style="{StaticResource LStyle}"/>
+      <Entry Text="{Binding Requirements}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource EStyle}" Placeholder="Bv Costum"/>
+      <Label x:Name="LabelNameEvent" Grid.Row="3" Grid.Column="1" Style="{StaticResource LStyle}"/>
+      <Entry Text="{Binding Name}" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource EStyle}" Placeholder="Bv Teambuilding februari"/>
+      <Label x:Name="LabelTProvided" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource LStyle}"/>
+      <Switch IsToggled="{Binding Transport}" Grid.Row="4" Grid.Column="3"/>
+      <Label x:Name="LabelFdProvided" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource LStyle}"/>
+      <Switch IsToggled="{Binding FoodAndDrinks}" Grid.Row="5" Grid.Column="3"/>
+      <Label x:Name="LabelWhithWho" Grid.Row="6" Grid.Column="1" Style="{StaticResource LStyle}"></Label>
+      <ListView x:Name="Names" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource ListStyle}" ItemSelected="Names_OnItemSelected" ItemsSource="{Binding UserList}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid RowSpacing="5" Padding="3">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalOptions="Center">
+                  <Label HorizontalOptions="Start" Text="{Binding LastName}" Style="{StaticResource ListviewLStyle}"/>
+                  <Label HorizontalOptions="StartAndExpand" Style="{StaticResource ListviewLStyle}" Text="{Binding FirstName}"/>                 
+                </StackLayout>
+                <Switch Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="Center" x:Name="AddPerson" IsToggled="{Binding IsSelected}"></Switch>
+              </Grid>                           
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <StackLayout Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalOptions="Center">
+        <TimePicker x:Name="TimePickerStart" WidthRequest="70" Time="{Binding TimeStart}"></TimePicker>
+        <TimePicker x:Name="TimePickerEnd" WidthRequest="70" Time="{Binding TimeEnd}"></TimePicker>
+      </StackLayout>
+      <DatePicker Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" WidthRequest="200" HorizontalOptions="Center" x:Name="DatePickerRoom" Date="{Binding Date}" Format="dd-MM-yyyy"></DatePicker>
+      <Button x:Name="SubmitButton" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource BStyleOne}" Command="{Binding SubmitEventCommand}"></Button>
+    </Grid>
+    
+    <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="Black" IsEnabled="true"
+            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="PositionProportional"
+     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>
+  </AbsoluteLayout>
+</ContentPage>

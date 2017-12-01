@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Beeple_office.Pages.FilterEventsPage"
+             x:Name="FilterEvents">
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BStyleOne" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ListStyle" TargetType="ListView">
+        <Setter Property="BackgroundColor" Value="Yellow" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="RowHeight">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Int32" Tablet="75" Phone="50"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="LStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="14" Phone="10"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <Style x:Key="ListviewLStyle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnIdiom x:TypeArguments="x:Double" Tablet="12" Phone="9"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <AbsoluteLayout
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="CenterAndExpand">
+
+    <Grid RowSpacing="5" Padding="3">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="1.5*" />
+        <ColumnDefinition Width="1.5*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Label x:Name="LabelPickTime" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource LStyle}"></Label>
+      <TimePicker x:Name="TimePickerStart" Grid.Row="1" Grid.Column="1" WidthRequest="70" Time="{Binding TimeStart}"></TimePicker>
+      <TimePicker x:Name="TimePickerEnd" Grid.Row="1" Grid.Column="2" WidthRequest="70" Time="{Binding TimeEnd}"></TimePicker>
+      <DatePicker Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="DatePickerEvent" Date="{Binding Date}" Format="dd-MM-yyyy"></DatePicker>
+      <ListView x:Name="ListFilteredEventsDate" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" IsVisible="{Binding VisibleDate}" ItemSelected="ListFilteredEvents_OnItemSelected" Style="{StaticResource ListStyle}" ItemsSource="{Binding FilteredEventsListDate}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid RowSpacing="5" Padding="3">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                  <Label Text="{Binding Path=BindingContext. LabelStart, Source={x:Reference Name=FilterEvents}}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="Start"></Label>
+                  <Label Text="{Binding Start, StringFormat='{}{0:hh\\:mm}'}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                  <Label Text="{Binding Path=BindingContext. LabelEnd, Source={x:Reference Name=FilterEvents}}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="Start"></Label>
+                  <Label Text="{Binding End, StringFormat='{}{0:hh\\:mm}'}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Style="{StaticResource ListviewLStyle}"/>
+              </Grid>           
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <ListView x:Name="ListFilteredEventsTime" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" IsVisible="{Binding VisibleTime}" ItemSelected="ListFilteredTime_OnItemSelected" Style="{StaticResource ListStyle}" ItemsSource="{Binding FilteredEventsListTime}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid RowSpacing="5" Padding="3">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                  <Label Text="{Binding Path=BindingContext. LabelStart, Source={x:Reference Name=FilterEvents}}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="Start"></Label>
+                  <Label Text="{Binding Start, StringFormat='{}{0:hh\\:mm}'}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                  <Label Text="{Binding Path=BindingContext. LabelEnd, Source={x:Reference Name=FilterEvents}}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="Start"></Label>
+                  <Label Text="{Binding End, StringFormat='{}{0:hh\\:mm}'}" Style="{StaticResource ListviewLStyle}" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Style="{StaticResource ListviewLStyle}"/>
+              </Grid>            
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Button x:Name="ButtonFilterDate" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding FilterEventDateCommand}" Style="{StaticResource BStyleOne}"></Button>
+      <Button x:Name="ButtonFilterTime" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding FilterEventTimeCommand}" Style="{StaticResource BStyleOne}"></Button>
+      <Button x:Name="ButtonNewEvent" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Command="{Binding GoToNewEventPageCommand}" Style="{StaticResource BStyleOne}"></Button>
+    </Grid>
+    
+    <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" Color="Black" IsEnabled="true"
+            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" AbsoluteLayout.LayoutFlags="PositionProportional"
+     AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>
+  </AbsoluteLayout>
+</ContentPage>
